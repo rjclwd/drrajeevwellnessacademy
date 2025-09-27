@@ -1,8 +1,2 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-
-export default function Home() {
-  return (
-    <Button>shadcn</Button>
-  );
-}
+// src/app/page.tsx
+export { default } from "./(site)/page";
