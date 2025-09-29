@@ -21,7 +21,7 @@ import {
   UserCheck,
   TrendingUp,
   Shield,
-  Zap
+  Zap,
 } from "lucide-react";
 
 export default function AboutClient() {
@@ -42,47 +42,82 @@ export default function AboutClient() {
     {
       id: "evidence",
       title: "Evidence-Based Learning",
-      description: "We emphasize clinically grounded practices, integrating modern research to enhance traditional homeopathy.",
+      description:
+        "We emphasize clinically grounded practices, integrating modern research to enhance traditional homeopathy.",
       icon: BookOpen,
       gradient: "from-primary to-ring",
       features: [
-        { icon: Shield, text: "Research-backed methodologies", color: "text-primary" },
+        {
+          icon: Shield,
+          text: "Research-backed methodologies",
+          color: "text-primary",
+        },
         { icon: TrendingUp, text: "Clinical case studies", color: "text-ring" },
-        { icon: Zap, text: "Modern integration techniques", color: "text-accent" },
-        { icon: Clock, text: "Continuous curriculum updates", color: "text-primary" }
+        {
+          icon: Zap,
+          text: "Modern integration techniques",
+          color: "text-accent",
+        },
+        {
+          icon: Clock,
+          text: "Continuous curriculum updates",
+          color: "text-primary",
+        },
       ],
-      stats: { primary: "500+", secondary: "Research Papers", tertiary: "Referenced" },
-      cta: "Explore Curriculum"
+      stats: {
+        primary: "500+",
+        secondary: "Research Papers",
+        tertiary: "Referenced",
+      },
+      cta: "Explore Curriculum",
     },
     {
       id: "practical",
       title: "Practical Application",
-      description: "Students gain hands-on experience through interactive workshops, case studies, and guided exercises.",
+      description:
+        "Students gain hands-on experience through interactive workshops, case studies, and guided exercises.",
       icon: Stethoscope,
       gradient: "from-ring to-accent",
       features: [
         { icon: Play, text: "Interactive video workshops", color: "text-ring" },
-        { icon: UserCheck, text: "Real patient case analysis", color: "text-accent" },
-        { icon: Target, text: "Hands-on practice sessions", color: "text-primary" },
-        { icon: Award, text: "Guided skill assessments", color: "text-ring" }
+        {
+          icon: UserCheck,
+          text: "Real patient case analysis",
+          color: "text-accent",
+        },
+        {
+          icon: Target,
+          text: "Hands-on practice sessions",
+          color: "text-primary",
+        },
+        { icon: Award, text: "Guided skill assessments", color: "text-ring" },
       ],
       stats: { primary: "100+", secondary: "Practice", tertiary: "Sessions" },
-      cta: "Try Workshop"
+      cta: "Try Workshop",
     },
     {
       id: "community",
       title: "Community & Support",
-      description: "Our learners join a vibrant community with mentorship, discussion forums, and ongoing support.",
+      description:
+        "Our learners join a vibrant community with mentorship, discussion forums, and ongoing support.",
       icon: Users,
       gradient: "from-accent to-primary",
       features: [
-        { icon: Users, text: "Expert mentorship program", color: "text-accent" },
+        {
+          icon: Users,
+          text: "Expert mentorship program",
+          color: "text-accent",
+        },
         { icon: Heart, text: "Peer support networks", color: "text-primary" },
         { icon: Globe, text: "24/7 global forum access", color: "text-ring" },
-        { icon: Sparkles, text: "Monthly networking events", color: "text-accent" }
+        {
+          icon: Sparkles,
+          text: "Monthly networking events",
+          color: "text-accent",
+        },
       ],
       stats: { primary: "24/7", secondary: "Community", tertiary: "Support" },
-      cta: "Join Community"
+      cta: "Join Community",
     },
   ];
 
@@ -99,7 +134,7 @@ export default function AboutClient() {
     },
     {
       title: "Compassion",
-      description: "Caring for our students' learning journey",
+      description: "Caring for our students&apos; learning journey",
       icon: Heart,
     },
     {
@@ -151,9 +186,11 @@ export default function AboutClient() {
           </div>
 
           <h1 className="text-4xl sm:text-6xl md:text-8xl font-black mb-8 bg-gradient-to-r from-primary via-ring to-accent bg-clip-text text-transparent leading-tight">
-            Dr. Rajeev's
+            Dr. Rajeev&apos;s
             <br />
-            <span className="text-3xl sm:text-5xl md:text-7xl">Wellness Academy</span>
+            <span className="text-3xl sm:text-5xl md:text-7xl">
+              Wellness Academy
+            </span>
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
@@ -245,7 +282,7 @@ export default function AboutClient() {
                           <Stethoscope className="w-12 h-12 sm:w-16 sm:h-16 text-primary-foreground" />
                         </div>
                         <p className="text-muted-foreground">
-                          Dr. Rajeev's Photo
+                          Dr. Rajeev&apos;s Photo
                         </p>
                       </div>
                     </div>
@@ -309,12 +346,12 @@ export default function AboutClient() {
               <div
                 key={approach.id}
                 className={`group relative bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-sm rounded-3xl border transition-all duration-500 overflow-hidden ${
-                  activeAccordion === approach.id 
-                    ? 'border-primary/50 shadow-2xl shadow-primary/10 bg-gradient-to-br from-card to-card/90 scale-[1.02]' 
-                    : 'border-border/30 hover:border-primary/30 hover:shadow-xl hover:scale-[1.01]'
+                  activeAccordion === approach.id
+                    ? "border-primary/50 shadow-2xl shadow-primary/10 bg-gradient-to-br from-card to-card/90 scale-[1.02]"
+                    : "border-border/30 hover:border-primary/30 hover:shadow-xl hover:scale-[1.01]"
                 }`}
                 style={{
-                  animationDelay: `${index * 100}ms`
+                  animationDelay: `${index * 100}ms`,
                 }}
               >
                 {/* Active indicator line */}
@@ -326,15 +363,19 @@ export default function AboutClient() {
                 <button
                   onClick={() => toggleAccordion(approach.id)}
                   className={`w-full p-4 sm:p-6 lg:p-8 text-left flex items-center justify-between transition-all duration-300 ${
-                    activeAccordion === approach.id ? 'pb-2 sm:pb-4' : 'hover:bg-card/80'
+                    activeAccordion === approach.id
+                      ? "pb-2 sm:pb-4"
+                      : "hover:bg-card/80"
                   }`}
                 >
                   <div className="flex items-center gap-3 sm:gap-4 lg:gap-6 flex-1 min-w-0">
                     <div
-                      className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r ${approach.gradient} rounded-2xl flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
-                        activeAccordion === approach.id 
-                          ? 'scale-110 shadow-xl' 
-                          : 'group-hover:scale-105'
+                      className={`w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-r ${
+                        approach.gradient
+                      } rounded-2xl flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
+                        activeAccordion === approach.id
+                          ? "scale-110 shadow-xl"
+                          : "group-hover:scale-105"
                       }`}
                     >
                       <approach.icon className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-primary-foreground" />
@@ -344,11 +385,13 @@ export default function AboutClient() {
                         {approach.title}
                       </h3>
                       <p className="text-xs sm:text-sm text-muted-foreground hidden sm:block">
-                        {activeAccordion === approach.id ? 'Click to collapse details' : 'Click to expand and learn more'}
+                        {activeAccordion === approach.id
+                          ? "Click to collapse details"
+                          : "Click to expand and learn more"}
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
                     {/* Active badge */}
                     {activeAccordion === approach.id && (
@@ -359,13 +402,17 @@ export default function AboutClient() {
                     )}
                     {/* Stats preview */}
                     <div className="hidden lg:flex flex-col items-end text-right">
-                      <div className="text-lg font-bold text-primary">{approach.stats.primary}</div>
-                      <div className="text-xs text-muted-foreground">{approach.stats.secondary} {approach.stats.tertiary}</div>
+                      <div className="text-lg font-bold text-primary">
+                        {approach.stats.primary}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {approach.stats.secondary} {approach.stats.tertiary}
+                      </div>
                     </div>
                     <ChevronDown
                       className={`w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground transition-all duration-300 ${
-                        activeAccordion === approach.id 
-                          ? "rotate-180 text-primary scale-110" 
+                        activeAccordion === approach.id
+                          ? "rotate-180 text-primary scale-110"
                           : "group-hover:text-primary"
                       }`}
                     />
@@ -373,37 +420,49 @@ export default function AboutClient() {
                 </button>
 
                 {/* Enhanced Expandable Content */}
-                <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  activeAccordion === approach.id ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
-                }`}>
+                <div
+                  className={`transition-all duration-500 ease-in-out overflow-hidden ${
+                    activeAccordion === approach.id
+                      ? "max-h-[600px] opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
                   <div className="px-4 sm:px-6 lg:px-8 pb-4 sm:pb-6 lg:pb-8">
                     <div className="ml-0 sm:ml-16 lg:ml-22 sm:pl-6 sm:border-l-2 border-border/30 space-y-6">
-                      
                       {/* Main Description */}
                       <div className="bg-gradient-to-r from-primary/5 via-transparent to-transparent p-4 sm:p-6 rounded-2xl border border-primary/10 backdrop-blur-sm">
                         <p className="text-muted-foreground text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
                           {approach.description}
                         </p>
-                        
+
                         {/* Mobile stats */}
                         <div className="lg:hidden bg-secondary/20 rounded-xl p-3 mb-4">
                           <div className="text-center">
-                            <div className="text-2xl font-bold text-primary">{approach.stats.primary}</div>
-                            <div className="text-xs text-muted-foreground">{approach.stats.secondary} {approach.stats.tertiary}</div>
+                            <div className="text-2xl font-bold text-primary">
+                              {approach.stats.primary}
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              {approach.stats.secondary}{" "}
+                              {approach.stats.tertiary}
+                            </div>
                           </div>
                         </div>
 
                         {/* Feature Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
                           {approach.features.map((feature, i) => (
-                            <div 
-                              key={i} 
+                            <div
+                              key={i}
                               className="flex items-center gap-3 p-3 bg-background/50 rounded-xl border border-border/30 hover:border-primary/30 transition-colors duration-200"
                             >
-                              <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${approach.gradient} flex items-center justify-center flex-shrink-0`}>
+                              <div
+                                className={`w-8 h-8 rounded-lg bg-gradient-to-r ${approach.gradient} flex items-center justify-center flex-shrink-0`}
+                              >
                                 <feature.icon className="w-4 h-4 text-primary-foreground" />
                               </div>
-                              <span className={`text-sm font-medium ${feature.color}`}>
+                              <span
+                                className={`text-sm font-medium ${feature.color}`}
+                              >
                                 {feature.text}
                               </span>
                             </div>
@@ -420,7 +479,9 @@ export default function AboutClient() {
                               Join thousands of satisfied learners worldwide
                             </p>
                           </div>
-                          <button className={`bg-gradient-to-r ${approach.gradient} text-primary-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-sm hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center gap-2 whitespace-nowrap`}>
+                          <button
+                            className={`bg-gradient-to-r ${approach.gradient} text-primary-foreground px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-bold text-sm hover:shadow-xl hover:scale-105 transition-all duration-200 flex items-center gap-2 whitespace-nowrap`}
+                          >
                             {approach.cta}
                             <ArrowRight className="w-4 h-4" />
                           </button>
@@ -437,15 +498,21 @@ export default function AboutClient() {
           <div className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
             <div className="text-center p-4 sm:p-6 bg-card/40 backdrop-blur-sm rounded-2xl border border-border/30 hover:bg-card/60 transition-colors duration-300">
               <div className="text-2xl font-bold text-primary mb-2">3</div>
-              <div className="text-sm text-muted-foreground">Core Methodologies</div>
+              <div className="text-sm text-muted-foreground">
+                Core Methodologies
+              </div>
             </div>
             <div className="text-center p-4 sm:p-6 bg-card/40 backdrop-blur-sm rounded-2xl border border-border/30 hover:bg-card/60 transition-colors duration-300">
               <div className="text-2xl font-bold text-ring mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Practical Focus</div>
+              <div className="text-sm text-muted-foreground">
+                Practical Focus
+              </div>
             </div>
             <div className="text-center p-4 sm:p-6 bg-card/40 backdrop-blur-sm rounded-2xl border border-border/30 hover:bg-card/60 transition-colors duration-300">
               <div className="text-2xl font-bold text-accent mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Community Support</div>
+              <div className="text-sm text-muted-foreground">
+                Community Support
+              </div>
             </div>
           </div>
         </div>
@@ -457,7 +524,7 @@ export default function AboutClient() {
               Our Core Values
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-              The principles that guide everything we do at Dr. Rajeev's
+              The principles that guide everything we do at Dr. Rajeev&apos;s
               Wellness Academy.
             </p>
           </div>

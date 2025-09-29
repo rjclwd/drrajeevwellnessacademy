@@ -11,7 +11,6 @@ import {
   Users,
   Play,
   BookOpen,
-  Filter,
   X,
   ChevronDown,
   SlidersHorizontal,
@@ -21,8 +20,9 @@ import {
 } from "lucide-react";
 
 // NOTE: Assuming this path is correct for your Next.js project setup
-import { courses, Course } from "@/lib/content/courses"; 
+import { courses, Course } from "@/lib/content/courses";
 import Link from "next/link"; // 👈 Import Link
+import Image from "next/image";
 
 const categories = [
   "All Categories",
@@ -59,7 +59,7 @@ export default function CoursesPage() {
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredAndSortedCourses = useMemo(() => {
-    let filtered = courses.filter((course) => {
+    const filtered = courses.filter((course) => {
       const matchesSearch =
         course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         course.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -134,7 +134,9 @@ export default function CoursesPage() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             {/* Thumbnail */}
             <div className="relative w-full sm:w-48 lg:w-64 aspect-video sm:aspect-[4/3] rounded-xl overflow-hidden bg-muted flex-shrink-0">
-              <img
+              <Image
+                width={256}
+                height={144}
                 src={thumbnailUrl}
                 alt={course.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -234,9 +236,7 @@ export default function CoursesPage() {
                     </div>
                   )}
                   {/* 👈 UI Fix: Changed 'Enroll' to 'View Course' for navigation context */}
-                  <button
-                    className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground px-4 py-2 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-200 text-sm"
-                  >
+                  <button className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground px-4 py-2 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-200 text-sm">
                     View Course
                   </button>
                 </div>
@@ -257,7 +257,9 @@ export default function CoursesPage() {
       >
         {/* Thumbnail */}
         <div className="relative aspect-video bg-muted overflow-hidden">
-          <img
+          <Image
+            width={400}
+            height={225}
             src={thumbnailUrl}
             alt={course.title}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -355,9 +357,7 @@ export default function CoursesPage() {
             )}
 
             {/* 👈 UI Fix: Changed 'Enroll' to 'View Course' for navigation context */}
-            <button
-              className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground px-3 py-2 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-200 text-sm"
-            >
+            <button className="bg-gradient-to-r from-primary to-primary/90 text-primary-foreground px-3 py-2 rounded-xl font-bold hover:shadow-lg hover:shadow-primary/25 hover:scale-105 transition-all duration-200 text-sm">
               View Course
             </button>
           </div>
@@ -565,7 +565,7 @@ export default function CoursesPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium border border-primary/20"
                 >
-                  "{searchQuery}"
+                  &quot;{searchQuery}&quot;
                   <button
                     onClick={() => setSearchQuery("")}
                     className="hover:bg-primary/20 rounded-full p-0.5"
@@ -642,12 +642,15 @@ export default function CoursesPage() {
                   ease: "easeOut",
                 }}
               >
-                <Link 
-                  href={`/courses/${course.slug}`} 
+                <Link
+                  href={`/courses/${course.slug}`}
                   // Use className="" here if needed, or rely on CourseCard styles for hover effects
-                  className="block h-full" 
+                  className="block h-full"
                 >
-                  <CourseCard course={course} isListView={viewType === "list"} />
+                  <CourseCard
+                    course={course}
+                    isListView={viewType === "list"}
+                  />
                 </Link>
               </motion.div>
             ))}
@@ -668,7 +671,7 @@ export default function CoursesPage() {
               No courses found
             </h3>
             <p className="text-muted-foreground mb-6 max-w-md mx-auto text-sm sm:text-base">
-              We couldn't find any courses matching your criteria. Try adjusting
+              We couldn&apos;t find any courses matching your criteria. Try adjusting
               your filters.
             </p>
             {hasActiveFilters && (

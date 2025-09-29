@@ -12,7 +12,6 @@ import {
   Clock,
   Shield,
   FileText,
-  Users,
   Heart,
   ExternalLink,
   Smartphone
@@ -31,7 +30,7 @@ export default function Footer() {
           <div className="lg:col-span-2 xl:col-span-2">
             <div className="mb-6">
               <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-primary-foreground">
-                Dr. Rajeev's Clinic
+                Dr. Rajeev&apos;s Clinic
               </h2>
               <p className="text-primary-foreground/80 leading-relaxed mb-6 text-sm lg:text-base">
                 Providing holistic healthcare solutions through homeopathy and natural healing methods. 
@@ -333,7 +332,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
             <div className="flex flex-wrap items-center gap-4 text-primary-foreground/80">
-              <p>© {currentYear} Dr. Rajeev's Clinic. All rights reserved.</p>
+              <p>© {currentYear} Dr. Rajeev&apos;s Clinic. All rights reserved.</p>
               <span className="hidden md:block">|</span>
               <p className="flex items-center gap-1">
                 Made with <Heart className="w-4 h-4 text-rose-400" /> for your wellness
